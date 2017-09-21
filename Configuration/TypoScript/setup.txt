@@ -1,0 +1,51 @@
+plugin.tx_tender {
+  view {
+    templateRootPaths {
+      0 = EXT:yellowpages2/Resources/Private/Templates/
+      1 = {$plugin.tx_tender.view.templateRootPath}
+    }
+    partialRootPaths {
+      0 = EXT:yellowpages2/Resources/Private/Partials/
+      1 = {$plugin.tx_tender.view.partialRootPath}
+    }
+    layoutRootPath {
+      0 = EXT:yellowpages2/Resources/Private/Layouts/
+      1 = {$plugin.tx_tender.view.layoutRootPath}
+    }
+  }
+
+  persistence {
+    storagePid = {$plugin.tx_tender.persistence.storagePid}
+    classes {
+      Tx_Extbase_Domain_Model_Category {
+        mapping {
+          tableName = sys_category
+          recordType =
+        }
+      }
+    }
+  }
+
+  features {
+    # uncomment the following line to enable the new Property Mapper.
+    rewrittenPropertyMapper = 1
+  }
+
+  settings {
+    uploadpath = uploads/tx_tender/
+    detailPid_WesEgovernment_Department = {$plugin.tx_tender.settings.detailPid_WesEgovernment_Department}
+    pidOfDetailPage = {$plugin.tx_tender.settings.pidOfDetailPage}
+  }
+}
+
+plugin.tx_tender._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+)

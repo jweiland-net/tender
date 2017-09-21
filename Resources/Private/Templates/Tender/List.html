@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+
+
+<f:section name="main">
+	<header><h1><f:translate key="tx_tender_domain_model_tender" /></h1></header>
+	<table class="tx-tender">
+		<thead>
+		<tr>
+			<th><f:link.action action="list" arguments="{sortby: 'starttime', direction: direction}"><f:translate key="tx_tender_domain_model_tender.date_of_publication" /></f:link.action></th>
+			<th><f:link.action action="list" arguments="{sortby: 'headline', direction: direction}"><f:translate key="tx_tender_domain_model_tender.headline" /></f:link.action></th>
+			<th><f:link.action action="list" arguments="{sortby: 'endtime', direction: direction}"><f:translate key="tx_tender_domain_model_tender.deadline" /></f:link.action></th>
+		</tr>
+		</thead>
+		<tbody>
+		<f:for each="{tenders}" as="tender">
+			<tr>
+				<td>
+					<f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.starttime}</f:format.date>
+				</td>
+				<td>
+					<strong><f:link.action pageUid="{settings.pidOfDetailPage}" action="show" arguments="{tender : tender}">{tender.headline}</f:link.action>
+					</strong>
+				</td>
+				<td>
+					<f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.endtime}</f:format.date>
+				</td>
+			</tr>
+		</f:for>
+		</tbody>
+	</table>
+
+</f:section>
