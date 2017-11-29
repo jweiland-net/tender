@@ -13,7 +13,7 @@ if (!defined('TYPO3_MODE')) {
     $_EXTKEY . '_tender',
     'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/Tender.xml'
 );
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY . '_tender'] = 'pi_flexform';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY . '_tender'] = 'pi_flexform';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
     'tx_tender_domain_model_tender',
