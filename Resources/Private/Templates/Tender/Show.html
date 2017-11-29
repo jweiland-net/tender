@@ -4,16 +4,16 @@
 
 <f:section name="main">
 
-	<h1>
-		<f:if condition="{tender.url}">
-			<f:then>
-				<f:alias map="{parts: '{tender:linkSplitter(parameter: tender.url)}'}">
-					<f:link.external uri="{parts.0}" target="{parts.1}" class="external">{tender.headline}</f:link.external>
-				</f:alias>
-			</f:then>
-			<f:else>{tender.headline}</f:else>
-		</f:if>
-	</h1>
+  <h1>
+    <f:if condition="{tender.url}">
+      <f:then>
+        <f:alias map="{parts: '{tender:linkSplitter(parameter: tender.url)}'}">
+          <f:link.external uri="{parts.0}" target="{parts.1}" class="external">{tender.headline}</f:link.external>
+        </f:alias>
+      </f:then>
+      <f:else>{tender.headline}</f:else>
+    </f:if>
+  </h1>
 
-	<f:render partial="Tender/Properties" arguments="{tender:tender}" />
+  <f:render partial="Tender/Properties" arguments="{tender:tender}" />
 </f:section>

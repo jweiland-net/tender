@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-22T13:32:22Z" product-name="tender">
-		<header/>
-		<body>
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-02-22T13:32:22Z" product-name="tender">
+    <header/>
+    <body>
 
-			<trans-unit id="plugin.title">
-				<source>Tender</source>
-			</trans-unit>
+      <trans-unit id="plugin.title">
+        <source>Tender</source>
+      </trans-unit>
 
-			<!-- tender -->
+      <!-- tender -->
 
-			<trans-unit id="tx_tender_domain_model_tender">
-				<source>Tender</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.headline">
-				<source>Headline</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.url">
-				<source>Url</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
-				<source>Tenderdepartment</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.mediafiles">
-				<source>Mediafiles</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.description">
-				<source>Description</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.start">
-				<source>Release date</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tender.stop">
-				<source>Deadline</source>
-			</trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender">
+        <source>Tender</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.headline">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.url">
+        <source>Url</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
+        <source>Tenderdepartment</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.mediafiles">
+        <source>Mediafiles</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.description">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.start">
+        <source>Release date</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.stop">
+        <source>Deadline</source>
+      </trans-unit>
 
-			<!-- tenderdepartment -->
+      <!-- tenderdepartment -->
 
-			<trans-unit id="tx_tender_domain_model_tenderdepartment">
-				<source>Tender Department</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tenderdepartment.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tenderdepartment.description">
-				<source>Description</source>
-			</trans-unit>
-			<trans-unit id="tx_tender_domain_model_tenderdepartment.department">
-				<source>department</source>
-			</trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment">
+        <source>Tender Department</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.name">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.description">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.department">
+        <source>department</source>
+      </trans-unit>
 
-		</body>
-	</file>
+    </body>
+  </file>
 </xliff>

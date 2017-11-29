@@ -16,14 +16,6 @@ plugin.tx_tender {
 
   persistence {
     storagePid = {$plugin.tx_tender.persistence.storagePid}
-    classes {
-      Tx_Extbase_Domain_Model_Category {
-        mapping {
-          tableName = sys_category
-          recordType =
-        }
-      }
-    }
   }
 
   features {
@@ -39,13 +31,13 @@ plugin.tx_tender {
 }
 
 plugin.tx_tender._CSS_DEFAULT_STYLE (
-	textarea.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
+  textarea.f3-form-error {
+    background-color:#FF9F9F;
+    border: 1px #FF0000 solid;
+  }
 
-	input.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
+  input.f3-form-error {
+    background-color:#FF9F9F;
+    border: 1px #FF0000 solid;
+  }
 )
