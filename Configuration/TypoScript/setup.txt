@@ -1,17 +1,17 @@
 plugin.tx_tender {
   view {
     templateRootPaths {
-      0 = EXT:yellowpages2/Resources/Private/Templates/
+      0 = EXT:tender/Resources/Private/Templates/Default/
       1 = {$plugin.tx_tender.view.templateRootPath}
     }
 
     partialRootPaths {
-      0 = EXT:yellowpages2/Resources/Private/Partials/
+      0 = EXT:tender/Resources/Private/Partials/
       1 = {$plugin.tx_tender.view.partialRootPath}
     }
 
     layoutRootPath {
-      0 = EXT:yellowpages2/Resources/Private/Layouts/
+      0 = EXT:tender/Resources/Private/Layouts/
       1 = {$plugin.tx_tender.view.layoutRootPath}
     }
   }
