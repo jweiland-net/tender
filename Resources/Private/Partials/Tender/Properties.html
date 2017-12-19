@@ -56,7 +56,9 @@
 			</f:then>
 		</f:if>
 		<dd class="noborder">
-			<f:link.action pageUid="{settings.detailPid_WesEgovernment_Department}" extensionName="wesegovernment" pluginName="pi1" controller="Department" action="show" arguments="{department: tender.tenderdepartment.department}">{tender.tenderdepartment.department.title}</f:link.action>
+			<f:link.action pageUid="{settings.pidOfOrganisationseinheitenDetailPage}" extensionName="servicebw2" pluginName="ServiceBW" controller="Organisationseinheiten" action="show" arguments="{id: tender.tenderdepartment.organisationseinheit.id}">
+        {tender.tenderdepartment.organisationseinheit.name}
+      </f:link.action>
 		</dd>
 	</dl>
 </f:if>

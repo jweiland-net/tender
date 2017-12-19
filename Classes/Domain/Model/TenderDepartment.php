@@ -15,6 +15,7 @@ namespace JWeiland\Tender\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use JWeiland\ServiceBw2\Utility\ModelUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
@@ -39,11 +40,11 @@ class TenderDepartment extends AbstractEntity
     protected $description = '';
 
     /**
-     * department
+     * organisationseinheit
      *
-     * @var TenderDepartment
+     * @var string
      */
-    protected $department;
+    protected $organisationseinheit = '';
 
     /**
      * Returns the name
@@ -88,23 +89,23 @@ class TenderDepartment extends AbstractEntity
     }
 
     /**
-     * Gets the department
+     * Gets Organisationseinheit
      *
-     * @return TenderDepartment
+     * @return array
      */
-    public function getDepartment()
+    public function getOrganisationseinheit(): array
     {
-        return $this->department;
+        return $this->organisationseinheit = ModelUtility::getOrganisationseinheit($this->organisationseinheit);
     }
 
     /**
-     * Sets the department
+     * Sets Organisationseinheit
      *
-     * @param TenderDepartment $department
+     * @param string $organisationseinheit
      * @return void
      */
-    public function setDepartment(TenderDepartment $department)
+    public function setOrganisationseinheit(string $organisationseinheit)
     {
-        $this->department = $department;
+        $this->organisationseinheit = $organisationseinheit;
     }
 }

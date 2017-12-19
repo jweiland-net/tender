@@ -107,7 +107,7 @@ class TenderController extends ActionController
      */
     public function listAction($sortby = 'starttime', $direction = 'desc')
     {
-        // check if there is a sorting set and set it to the reposetory
+        // check if there is a sorting set and set it to the repository
         if ($sortby
             && $direction
             && $this->ALLOWED_SORTING_DIRECTIONS[$direction]
@@ -142,6 +142,7 @@ class TenderController extends ActionController
      * init the show action
      *
      * @return void
+     * @throws \UnexpectedValueException
      */
     public function initializeShowAction()
     {

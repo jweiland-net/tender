@@ -33,7 +33,7 @@ plugin.tx_tender {
 
   settings {
     uploadpath = uploads/tx_tender/
-    detailPid_WesEgovernment_Department = {$plugin.tx_tender.settings.detailPid_WesEgovernment_Department}
+    pidOfOrganisationseinheitenDetailPage = {$plugin.tx_tender.settings.pidOfOrganisationseinheitenDetailPage}
     pidOfDetailPage = {$plugin.tx_tender.settings.pidOfDetailPage}
   }
 }

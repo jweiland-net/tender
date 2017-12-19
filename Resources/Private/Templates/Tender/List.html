@@ -18,7 +18,8 @@
 					<f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.starttime}</f:format.date>
 				</td>
 				<td>
-					<strong><f:link.action pageUid="{settings.pidOfDetailPage}" action="show" arguments="{tender : tender}">{tender.headline}</f:link.action>
+					<strong>
+            <f:link.action pageUid="{settings.pidOfDetailPage}" action="show" arguments="{tender: tender}">{tender.headline}</f:link.action>
 					</strong>
 				</td>
 				<td>

@@ -24,10 +24,10 @@ return [
         'iconfile' => 'EXT:tender/Resources/Public/Icons/tx_tender_domain_model_tenderdepartment.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, department'
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, organisationseinheit'
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, department,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime']
+        '1' => ['showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, organisationseinheit,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime']
     ],
     'palettes' => [
         '1' => ['showitem' => '']
@@ -137,24 +137,23 @@ return [
                         'icon' => 'wizard_rte2.gif',
                         'notNewRecords' => 1,
                         'RTEonly' => 1,
-                        'script' => 'wizard_rte.php',
-                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
-                        'type' => 'script'
+                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
+                        'type' => 'script',
+                        'module' => [
+                            'name' => 'wizard_rte'
+                        ]
                     ]
                 ]
             ],
             'defaultExtras' => 'richtext:rte_transform[flag=rte_enabled|mode=ts]'
         ],
-        'department' => [
+        'organisationseinheit' => [
             'exclude' => 0,
             'label' => 'LLL:EXT:tender/Resources/Private/Language/locallang_db.xlf:tx_tender_domain_model_tenderdepartment.department',
-            'config' => [
+            'config' => \JWeiland\ServiceBw2\Utility\TCAUtility::getOrganisationseinheitenFieldTCAConfig([
                 'autoSizeMax' => 50,
-                'foreign_table' => 'tx_wesegovernment_domain_model_department',
-                'foreign_table_where' => 'ORDER BY tx_wesegovernment_domain_model_department.title',
-                'maxitems' => 1,
-                'type' => 'select'
-            ]
+                'maxitems' => 1
+            ])
         ]
     ]
 ];

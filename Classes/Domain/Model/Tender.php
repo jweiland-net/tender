@@ -88,7 +88,7 @@ class Tender extends AbstractEntity
      */
     public function getHeadline(): string
     {
-        return $this->headline = '';
+        return $this->headline;
     }
 
     /**

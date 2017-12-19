@@ -30,6 +30,7 @@ class TenderRepository extends Repository
      *
      * @param array $categories
      * @return QueryResultInterface|null
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function findByCategories(array $categories)
     {

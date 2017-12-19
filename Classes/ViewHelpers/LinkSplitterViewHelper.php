@@ -26,7 +26,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 class LinkSplitterViewHelper extends AbstractViewHelper
 {
     /**
-     * implements a vievHelper which splits link parameters into a fluid usable array
+     * implements a viewHelper which splits link parameters into a fluid usable array
      *
      * @param string $parameter
      * @return array
