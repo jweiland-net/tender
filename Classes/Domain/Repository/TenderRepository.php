@@ -36,6 +36,10 @@ class TenderRepository extends Repository
     {
         $query = $this->createQuery();
 
+        // add storage PIDs. But not for sys_category
+        // @link: https://forge.typo3.org/issues/83296
+        $query->getQuerySettings()->setRespectStoragePage(false);
+
         return $query->matching(
             $query->in('category.uid', $categories)
         )->execute();
