@@ -2,7 +2,6 @@
     "name": "jweiland/tender",
     "type": "typo3-cms-extension",
     "description": "Tender management",
-    "version": "1.0.1",
     "license": "GPL-2.0-or-later",
     "keywords": ["typo3", "TYPO3 CMS", "tender"],
     "homepage": "http://www.jweiland.net",
