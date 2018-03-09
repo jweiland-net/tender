@@ -148,7 +148,7 @@ return [
                         'icon' => 'wizard_rte2.gif',
                         'notNewRecords' => 1,
                         'RTEonly' => 1,
-                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
+                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
                         'type' => 'script',
                         'module' => [
                             'name' => 'wizard_rte'
