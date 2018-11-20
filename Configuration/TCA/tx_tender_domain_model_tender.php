@@ -155,22 +155,10 @@ return [
             'label' => 'LLL:EXT:tender/Resources/Private/Language/locallang_db.xlf:tx_tender_domain_model_tender.url',
             'config' => [
                 'type' => 'input',
-                'size' => 30,
+                'renderType' => 'inputLink',
+                'size' => 50,
+                'max' => 1024,
                 'eval' => 'trim',
-                'wizards' => [
-                    '_PADDING' => 2,
-                    'link' => [
-                        'type' => 'popup',
-                        'title' => 'Link',
-                        'icon' => 'link_popup.gif',
-                        'script' => 'browse_links.php?mode=wizard',
-                        'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1',
-                        'module' => [
-                            'name' => 'wizard_link'
-                        ]
-                    ]
-                ],
-                'softref' => 'typolink[linkList]'
             ]
         ],
         'tenderdepartment' => [
@@ -178,6 +166,7 @@ return [
             'label' => 'LLL:EXT:tender/Resources/Private/Language/locallang_db.xlf:tx_tender_domain_model_tender.tenderdepartment',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_tender_domain_model_tenderdepartment',
                 'items' => [
                     ['', 0]
@@ -193,11 +182,15 @@ return [
                 'type' => 'group',
                 'internal_type' => 'file',
                 'uploadfolder' => 'uploads/tx_tender',
-                'show_thumbs' => 0,
                 'size' => 4,
                 'maxitems' => 9999,
                 'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] . ',pdf',
-                'disallowed' => ''
+                'disallowed' => '',
+                'fieldWizard' => [
+                    'fileThumbnails' => [
+                        'disabled' => true
+                    ]
+                ]
             ]
         ],
         'description' => [
@@ -207,22 +200,10 @@ return [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 15,
-                'eval' => 'trim',
-                'wizards' => [
-                    'RTE' => [
-                        'icon' => 'wizard_rte2.gif',
-                        'notNewRecords' => 1,
-                        'RTEonly' => 1,
-                        'script' => 'wizard_rte.php',
-                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
-                        'type' => 'script',
-                        'module' => [
-                            'name' => 'wizard_rte'
-                        ]
-                    ]
-                ]
+                'softref' => 'rtehtmlarea_images,typolink_tag,images,email[subst],url',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
             ],
-            'defaultExtras' => 'richtext:rte_transform[flag=rte_enabled|mode=ts]'
         ]
     ]
 ];
