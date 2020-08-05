@@ -1,89 +1,64 @@
 <?php
+
 declare(strict_types=1);
-namespace JWeiland\Tender\Domain\Model;
 
 /*
- * This file is part of the tender project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
+ * This file is part of the package jweiland/tender.
  * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
+ * LICENSE file that was distributed with this source code.
  */
+
+namespace JWeiland\Tender\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * Class Tender
- *
- * @package JWeiland\Tender\Domain\Model
  */
 class Tender extends AbstractEntity
 {
     /**
-     * headline
-     *
      * @var string
      */
     protected $headline = '';
 
     /**
-     * url to the header
-     *
      * @var string
      */
     protected $url = '';
 
     /**
-     * tenderdepartment
-     *
      * @var \JWeiland\Tender\Domain\Model\TenderDepartment
      */
     protected $tenderdepartment;
 
     /**
-     * category
-     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
      */
     protected $category;
 
     /**
-     * starttime
-     *
      * @var \DateTime
      */
     protected $starttime;
 
     /**
-     * endtime
-     *
      * @var \DateTime
      */
     protected $endtime;
 
     /**
-     * mediafiles
-     *
-     * @var string
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
-    protected $mediafiles = '';
+    protected $mediafiles;
 
     /**
-     * description
-     *
      * @var string
      */
     protected $description = '';
 
     /**
-     * Returns the headline
-     *
      * @return string $headline
      */
     public function getHeadline(): string
@@ -92,19 +67,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the headline
-     *
      * @param string $headline
-     * @return void
+     * @return Tender
      */
-    public function setHeadline(string $headline)
+    public function setHeadline(string $headline): Tender
     {
         $this->headline = $headline;
+        return $this;
     }
 
     /**
-     * Returns the url
-     *
      * @return string $url
      */
     public function getUrl(): string
@@ -113,19 +85,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the url
-     *
      * @param string $url
-     * @return void
+     * @return Tender
      */
-    public function setUrl(string $url)
+    public function setUrl(string $url): Tender
     {
         $this->url = $url;
+        return $this;
     }
 
     /**
-     * Returns the tenderdepartment
-     *
      * @return TenderDepartment $tenderdepartment
      */
     public function getTenderdepartment()
@@ -134,19 +103,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the tenderdepartment
-     *
      * @param TenderDepartment $tenderdepartment
-     * @return void
+     * @return Tender
      */
-    public function setTenderdepartment(TenderDepartment $tenderdepartment)
+    public function setTenderdepartment(TenderDepartment $tenderdepartment): Tender
     {
         $this->tenderdepartment = $tenderdepartment;
+        return $this;
     }
 
     /**
-     * Returns the category
-     *
      * @return ObjectStorage $category
      */
     public function getCategory()
@@ -155,19 +121,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the category
-     *
      * @param ObjectStorage $category
-     * @return void
+     * @return Tender
      */
-    public function setCategory(ObjectStorage $category)
+    public function setCategory(ObjectStorage $category): Tender
     {
         $this->category = $category;
+        return $this;
     }
 
     /**
-     * Gets the starttime
-     *
      * @return \DateTime $starttime
      */
     public function getStarttime()
@@ -176,19 +139,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the starttime
-     *
      * @param \DateTime $starttime
-     * @return void
+     * @return Tender
      */
-    public function setStarttime(\DateTime $starttime)
+    public function setStarttime(\DateTime $starttime): Tender
     {
         $this->starttime = $starttime;
+        return $this;
     }
 
     /**
-     * Gets the endtime
-     *
      * @return \DateTime $endtime
      */
     public function getEndtime()
@@ -197,19 +157,16 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the endtime
-     *
      * @param \DateTime $endtime
-     * @return void
+     * @return Tender
      */
-    public function setEndtime(\DateTime $endtime)
+    public function setEndtime(\DateTime $endtime): Tender
     {
         $this->endtime = $endtime;
+        return $this;
     }
 
     /**
-     * Gets the description
-     *
      * @return string $description
      */
     public function getDescription(): string
@@ -218,43 +175,32 @@ class Tender extends AbstractEntity
     }
 
     /**
-     * Sets the description
-     *
      * @param string $description
-     * @return void
+     * @return Tender
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): Tender
     {
         $this->description = $description;
+        return $this;
     }
 
     /**
      * Gets the mediafiles
      *
-     * @return string
+     * @return ObjectStorage
      */
-    public function getMediafiles(): string
+    public function getMediafiles(): ObjectStorage
     {
         return $this->mediafiles;
     }
 
     /**
-     * Sets the mediafiles
-     *
-     * @param string $mediafiles
+     * @param ObjectStorage $mediafiles
+     * @return Tender
      */
-    public function setMediafiles(string $mediafiles)
+    public function setMediafiles(ObjectStorage $mediafiles): Tender
     {
         $this->mediafiles = $mediafiles;
-    }
-
-    /**
-     * Gets the mediafiles as array
-     *
-     * @return array|false
-     */
-    public function getMediafilesAsArray()
-    {
-        return explode(',', $this->mediafiles);
+        return $this;
     }
 }

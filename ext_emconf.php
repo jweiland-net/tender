@@ -8,13 +8,12 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'projects@jweiland.net',
     'author_company' => 'jweiland.net',
     'state' => 'stable',
-    'uploadfolder' => 1,
-    'createDirs' => 'uploads/tx_tender',
-    'clearCacheOnLoad' => 0,
+    'clearCacheOnLoad' => false,
     'version' => '2.0.0',
     'constraints' => [
         'depends' => [
             'typo3' => '9.5.17-10.4.99',
+            'service_bw' => ''
         ],
         'conflicts' => [],
         'suggests' => []

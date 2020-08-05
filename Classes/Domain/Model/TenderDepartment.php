@@ -1,54 +1,39 @@
 <?php
+
 declare(strict_types=1);
-namespace JWeiland\Tender\Domain\Model;
 
 /*
- * This file is part of the tender project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
+ * This file is part of the package jweiland/tender.
  * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
+ * LICENSE file that was distributed with this source code.
  */
+
+namespace JWeiland\Tender\Domain\Model;
 
 use JWeiland\ServiceBw2\Utility\ModelUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
  * Class TenderDepartment
- *
- * @package JWeiland\Tender\Domain\Model
  */
 class TenderDepartment extends AbstractEntity
 {
     /**
-     * name
-     *
      * @var string
      */
     protected $name = '';
 
     /**
-     * description
-     *
      * @var string
      */
     protected $description = '';
 
     /**
-     * organisationseinheit
-     *
      * @var string
      */
     protected $organisationseinheit = '';
 
     /**
-     * Returns the name
-     *
      * @return string $name
      */
     public function getName(): string
@@ -57,19 +42,16 @@ class TenderDepartment extends AbstractEntity
     }
 
     /**
-     * Sets the name
-     *
      * @param string $name
-     * @return void
+     * @return TenderDepartment
      */
-    public function setName(string $name)
+    public function setName(string $name): TenderDepartment
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
-     * Returns the description
-     *
      * @return string $description
      */
     public function getDescription(): string
@@ -78,19 +60,16 @@ class TenderDepartment extends AbstractEntity
     }
 
     /**
-     * Sets the description
-     *
      * @param string $description
-     * @return void
+     * @return TenderDepartment
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): TenderDepartment
     {
         $this->description = $description;
+        return $this;
     }
 
     /**
-     * Gets Organisationseinheit
-     *
      * @return array
      */
     public function getOrganisationseinheit(): array
@@ -99,13 +78,12 @@ class TenderDepartment extends AbstractEntity
     }
 
     /**
-     * Sets Organisationseinheit
-     *
      * @param string $organisationseinheit
-     * @return void
+     * @return TenderDepartment
      */
-    public function setOrganisationseinheit(string $organisationseinheit)
+    public function setOrganisationseinheit(string $organisationseinheit): TenderDepartment
     {
         $this->organisationseinheit = $organisationseinheit;
+        return $this;
     }
 }

@@ -178,20 +178,11 @@ return [
         'mediafiles' => [
             'exclude' => true,
             'label' => 'LLL:EXT:tender/Resources/Private/Language/locallang_db.xlf:tx_tender_domain_model_tender.mediafiles',
-            'config' => [
-                'type' => 'group',
-                'internal_type' => 'file',
-                'uploadfolder' => 'uploads/tx_tender',
-                'size' => 4,
-                'maxitems' => 9999,
-                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] . ',pdf',
-                'disallowed' => '',
-                'fieldWizard' => [
-                    'fileThumbnails' => [
-                        'disabled' => true
-                    ]
-                ]
-            ]
+            'config' =>\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'mediafiles',
+                [],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            ),
         ],
         'description' => [
             'exclude' => true,

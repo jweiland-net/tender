@@ -1,19 +1,14 @@
 <?php
+
 declare(strict_types=1);
-namespace JWeiland\Tender\Controller;
 
 /*
- * This file is part of the tender project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
+ * This file is part of the package jweiland/tender.
  * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
+ * LICENSE file that was distributed with this source code.
  */
+
+namespace JWeiland\Tender\Controller;
 
 use JWeiland\Tender\Domain\Model\Tender;
 use JWeiland\Tender\Domain\Repository\TenderRepository;
@@ -23,8 +18,6 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
  * Class TenderController
- *
- * @package JWeiland\Tender\Controller
  */
 class TenderController extends ActionController
 {
@@ -60,18 +53,14 @@ class TenderController extends ActionController
      * injects tenderRepository
      *
      * @param TenderRepository $tenderRepository
-     * @return void
      */
     public function injectTenderRepository(TenderRepository $tenderRepository)
     {
         $this->tenderRepository = $tenderRepository;
     }
 
-
     /**
      * preprocessing of all actions
-     *
-     * @return void
      */
     public function initializeAction()
     {
@@ -87,8 +76,6 @@ class TenderController extends ActionController
 
     /**
      *  init the list action
-     *
-     * @return void
      */
     public function initializeListAction()
     {
@@ -103,9 +90,8 @@ class TenderController extends ActionController
      *
      * @param string $sortby
      * @param string $direction
-     * @return void
      */
-    public function listAction($sortby = 'starttime', $direction = 'desc')
+    public function listAction(string $sortby = 'starttime', string $direction = 'desc')
     {
         // check if there is a sorting set and set it to the repository
         if ($sortby
@@ -141,7 +127,6 @@ class TenderController extends ActionController
     /**
      * init the show action
      *
-     * @return void
      * @throws \UnexpectedValueException
      */
     public function initializeShowAction()
@@ -153,7 +138,6 @@ class TenderController extends ActionController
      * action show
      *
      * @param Tender $tender
-     * @return void
      */
     public function showAction(Tender $tender)
     {

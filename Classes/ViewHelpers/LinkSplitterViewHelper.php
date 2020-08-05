@@ -1,27 +1,20 @@
 <?php
+
 declare(strict_types=1);
-namespace JWeiland\Tender\ViewHelpers;
 
 /*
- * This file is part of the tender project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
+ * This file is part of the package jweiland/tender.
  * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
+ * LICENSE file that was distributed with this source code.
  */
 
+namespace JWeiland\Tender\ViewHelpers;
+
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class LinkSplitterViewHelper
- *
- * @package JWeiland\Tender\ViewHelpers
  */
 class LinkSplitterViewHelper extends AbstractViewHelper
 {
@@ -31,7 +24,7 @@ class LinkSplitterViewHelper extends AbstractViewHelper
      * @param string $parameter
      * @return array
      */
-    public function render($parameter = '')
+    public function render($parameter = ''): array
     {
         $parts = [];
         if (!empty($parameter)) {

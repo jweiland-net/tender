@@ -1,89 +1,89 @@
 <dl class="extdl">
-  <f:if condition="{tender.endtime}">
-    <dt>
-      <f:translate key="tx_tender_domain_model_tender.deadline"/>
-    </dt>
-    <dd>
-      <f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.endtime}
-      </f:format.date>
-    </dd>
-  </f:if>
+	<f:if condition="{tender.endtime}">
+		<dt>
+			<f:translate key="tx_tender_domain_model_tender.deadline"/>
+		</dt>
+		<dd>
+			<f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.endtime}
+			</f:format.date>
+		</dd>
+	</f:if>
 
-  <f:if condition="{tender.starttime}">
-    <dt>
-      <f:translate key="tx_tender_domain_model_tender.date_of_publication"/>
-    </dt>
-    <dd>
-      <f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.starttime}
-      </f:format.date>
-    </dd>
-  </f:if>
+	<f:if condition="{tender.starttime}">
+		<dt>
+			<f:translate key="tx_tender_domain_model_tender.date_of_publication"/>
+		</dt>
+		<dd>
+			<f:format.date format="{f:translate(key: 'tx_tender_domain_model_tender.dateformat')}">{tender.starttime}
+			</f:format.date>
+		</dd>
+	</f:if>
 </dl>
 
 <f:if condition="{tender.category}">
-  <dl class="extdl rulerafter">
-    <dt class="noborder">
-      <f:translate key="tx_tender_domain_model_tender.categories"/>
-      :
-    </dt>
-    <dd class="noborder">
-      <f:for each="{tender.category}" as="cat" iteration="iter">
-        <f:if condition="{iter.isFirst}!=1">
-          <f:then>,</f:then>
-        </f:if>
-        {cat.title}
-      </f:for>
-    </dd>
-  </dl>
+	<dl class="extdl rulerafter">
+		<dt class="noborder">
+			<f:translate key="tx_tender_domain_model_tender.categories"/>
+			:
+		</dt>
+		<dd class="noborder">
+			<f:for each="{tender.category}" as="cat" iteration="iter">
+				<f:if condition="{iter.isFirst}!=1">
+					<f:then>,</f:then>
+				</f:if>
+				{cat.title}
+			</f:for>
+		</dd>
+	</dl>
 </f:if>
 
 <f:if condition="{tender.description}">
-  <dl class="extdl rulerafter">
-    <dt class="noborder">
-      <f:translate key="tx_tender_domain_model_tender.description"/>
-    </dt>
-    <dd class="noborder">
-      {tender.description -> f:format.raw()}
-    </dd>
-  </dl>
+	<dl class="extdl rulerafter">
+		<dt class="noborder">
+			<f:translate key="tx_tender_domain_model_tender.description"/>
+		</dt>
+		<dd class="noborder">
+			{tender.description -> f:format.raw()}
+		</dd>
+	</dl>
 </f:if>
 
 <f:if condition="{tender.tenderdepartment}">
-  <dl class="extdl rulerafter">
-    <dt class="noborder">
-      <f:translate key="tx_tender_domain_model_tender.tenderdepartment"/>
-    </dt>
-    <dd class="noborder">
-      {tender.tenderdepartment.name}
-    </dd>
-    <f:if condition="{tender.tenderdepartment.description}">
-      <f:then>
-        <dd class="noborder">
-          {tender.tenderdepartment.description}
-        </dd>
-      </f:then>
-    </f:if>
-    <dd class="noborder">
-      <f:link.action pageUid="{settings.pidOfOrganisationseinheitenDetailPage}" extensionName="servicebw2"
-                     pluginName="ServiceBW" controller="Organisationseinheiten" action="show"
-                     arguments="{id: tender.tenderdepartment.organisationseinheit.id}">
-        {tender.tenderdepartment.organisationseinheit.name}
-      </f:link.action>
-    </dd>
-  </dl>
+	<dl class="extdl rulerafter">
+		<dt class="noborder">
+			<f:translate key="tx_tender_domain_model_tender.tenderdepartment"/>
+		</dt>
+		<dd class="noborder">
+			{tender.tenderdepartment.name}
+		</dd>
+		<f:if condition="{tender.tenderdepartment.description}">
+			<f:then>
+				<dd class="noborder">
+					{tender.tenderdepartment.description}
+				</dd>
+			</f:then>
+		</f:if>
+		<dd class="noborder">
+			<f:link.action pageUid="{settings.pidOfOrganisationseinheitenDetailPage}" extensionName="servicebw2"
+										 pluginName="ServiceBW" controller="Organisationseinheiten" action="show"
+										 arguments="{id: tender.tenderdepartment.organisationseinheit.id}">
+				{tender.tenderdepartment.organisationseinheit.name}
+			</f:link.action>
+		</dd>
+	</dl>
 </f:if>
 
 <f:if condition="{tender.mediafiles}">
-  <dl class="extdl">
-    <dt>
-      <f:translate key="tx_tender_domain_model_tender.mediafiles"/>
-    </dt>
+	<dl class="extdl">
+		<dt>
+			<f:translate key="tx_tender_domain_model_tender.mediafiles"/>
+		</dt>
 
-    <f:for each="{tender.MediafilesAsArray}" as="file">
-      <dd>
-        <span aria-hidden="true" class="icon-download"></span>
-        <f:link.external uri="{settings.TYPO3_SITE_URL}{settings.uploadpath}{file}">{file}</f:link.external>
-      </dd>
-    </f:for>
-  </dl>
+		<f:for each="{tender.mediafiles}" as="file">
+			<dd>
+				<span aria-hidden="true" class="icon-download"></span>
+				<f:link.external uri="{f:uri.image(image: '{file}')}">{file.title}</f:link.external>
+			</dd>
+		</f:for>
+	</dl>
 </f:if>

@@ -9,3 +9,6 @@ if (!defined('TYPO3_MODE')) {
         'Tender' => 'list, show'
     ]
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['tenderUpdateMediaFilesToFal']
+    = \JWeiland\Tender\Updates\TenderMediaFilesUpdateWizard::class;

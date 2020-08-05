@@ -26,7 +26,6 @@ plugin.tx_tender {
   }
 
   settings {
-    uploadpath = uploads/tx_tender/
     pidOfOrganisationseinheitenDetailPage = {$plugin.tx_tender.settings.pidOfOrganisationseinheitenDetailPage}
     pidOfDetailPage = {$plugin.tx_tender.settings.pidOfDetailPage}
   }
