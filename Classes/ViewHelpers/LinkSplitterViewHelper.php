@@ -11,24 +11,30 @@ declare(strict_types=1);
 namespace JWeiland\Tender\ViewHelpers;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class LinkSplitterViewHelper
  */
 class LinkSplitterViewHelper extends AbstractViewHelper
 {
-    /**
-     * implements a viewHelper which splits link parameters into a fluid usable array
-     *
-     * @param string $parameter
-     * @return array
-     */
-    public function render($parameter = ''): array
+    use CompileWithRenderStatic;
+
+    public function initializeArguments()
     {
+        $this->registerArgument('parameter', 'string', 'value to split', true);
+    }
+
+    public static function renderStatic(
+        array $arguments,
+        \Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ) {
         $parts = [];
-        if (!empty($parameter)) {
-            $parts = array_slice(GeneralUtility::trimExplode(' ', $parameter), 0, 2);
+        if (!empty($arguments['parameter'])) {
+            $parts = array_slice(GeneralUtility::trimExplode(' ', $arguments['parameter']), 0, 2);
         }
 
         return $parts;
