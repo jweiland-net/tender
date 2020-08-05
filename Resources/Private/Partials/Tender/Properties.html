@@ -82,7 +82,7 @@
 		<f:for each="{tender.mediafiles}" as="file">
 			<dd>
 				<span aria-hidden="true" class="icon-download"></span>
-				<f:link.external uri="{f:uri.image(image: '{file}')}">{file.title}</f:link.external>
+				<f:link.external uri="{f:uri.image(image: '{file}', absolute: '1')}" title="{file.originalResource.originalFile.name}">{file.originalResource.originalFile.name}</f:link.external>
 			</dd>
 		</f:for>
 	</dl>
