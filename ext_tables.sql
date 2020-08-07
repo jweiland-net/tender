@@ -5,7 +5,7 @@ CREATE TABLE tx_tender_domain_model_tender (
 	headline varchar(255) DEFAULT '' NOT NULL,
 	url varchar(255) DEFAULT '' NOT NULL,
 	tenderdepartment int(11) unsigned DEFAULT '0',
-	mediafiles int(11) unsigned DEFAULT '0',
+	mediafiles text,
 	description text
 );
 
