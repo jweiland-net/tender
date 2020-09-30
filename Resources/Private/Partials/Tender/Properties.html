@@ -20,18 +20,18 @@
 	</f:if>
 </dl>
 
-<f:if condition="{tender.category}">
+<f:if condition="{tender.categories}">
 	<dl class="extdl rulerafter">
 		<dt class="noborder">
 			<f:translate key="tx_tender_domain_model_tender.categories"/>
 			:
 		</dt>
 		<dd class="noborder">
-			<f:for each="{tender.category}" as="cat" iteration="iter">
+			<f:for each="{tender.categories}" as="category" iteration="iter">
 				<f:if condition="{iter.isFirst}!=1">
 					<f:then>,</f:then>
 				</f:if>
-				{cat.title}
+				{category.title}
 			</f:for>
 		</dd>
 	</dl>

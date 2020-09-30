@@ -38,11 +38,6 @@ class Tender extends AbstractEntity
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
      */
-    protected $category;
-
-    /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
-     */
     protected $categories;
 
     /**
@@ -111,18 +106,18 @@ class Tender extends AbstractEntity
     public function getCategory(): ObjectStorage
     {
         trigger_error('getCategory() will be removed in tender 3.0.0. Please use getCategories() instead.', E_USER_DEPRECATED);
-        return $this->category;
+        return $this->categories;
     }
 
     /**
-     * @param ObjectStorage $category
+     * @param ObjectStorage $categories
      * @return $this
      * @deprecated
      */
-    public function setCategory(ObjectStorage $category): Tender
+    public function setCategory(ObjectStorage $categories): Tender
     {
         trigger_error('setCategory() will be removed in tender 3.0.0. Please use setCategories() instead.', E_USER_DEPRECATED);
-        $this->category = $category;
+        $this->categories = $categories;
         return $this;
     }
 
