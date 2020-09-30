@@ -1,10 +1,9 @@
 <?php
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'tender',
     'description' => 'tender management',
     'category' => 'plugin',
-    'author' => 'Yves Poersch',
+    'author' => 'Stefan Froemken',
     'author_email' => 'projects@jweiland.net',
     'author_company' => 'jweiland.net',
     'state' => 'stable',
