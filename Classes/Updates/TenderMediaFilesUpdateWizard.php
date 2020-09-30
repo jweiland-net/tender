@@ -11,8 +11,6 @@ declare(strict_types=1);
 namespace JWeiland\Tender\Updates;
 
 use Doctrine\DBAL\DBALException;
-use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
 use Symfony\Component\Console\Output\OutputInterface;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -33,10 +31,8 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
  * Because of TYPO3 Bug: https://forge.typo3.org/issues/92451 we can not use
  * an extended version of BackendLayoutIconUpdateWizard.
  */
-class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInterface, LoggerAwareInterface
+class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInterface
 {
-    use LoggerAwareTrait;
-
     /**
      * @var OutputInterface
      */
@@ -253,15 +249,6 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
                     $file = $this->storage->getFile($this->targetPath . $item);
                     $fileUid = $file->getUid();
                 } catch (\InvalidArgumentException $e) {
-                    // no file found, no reference can be set
-                    $this->logger->notice(
-                        'File ' . $this->sourcePath . $item . ' does not exist. Reference was not migrated.',
-                        [
-                            'table' => $this->table,
-                            'record' => $row,
-                            'field' => $this->fieldToMigrate,
-                        ]
-                    );
                     $format = 'File \'%s\' does not exist. Referencing field: %s.%d.%s. The reference was not migrated.';
                     $this->output->writeln(sprintf(
                         $format,
