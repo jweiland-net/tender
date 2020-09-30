@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeCategorizable(
     'tender',
     'tx_tender_domain_model_tender',
-    'category',
+    'categories',
     [
         'label' => 'LLL:EXT:tender/Resources/Private/Language/locallang.xlf:tx_tender_domain_model_tender.categories',
         'fieldConfiguration' => [

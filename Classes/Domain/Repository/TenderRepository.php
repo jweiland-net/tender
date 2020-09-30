@@ -34,7 +34,7 @@ class TenderRepository extends Repository
         $query->getQuerySettings()->setRespectStoragePage(false);
 
         return $query->matching(
-            $query->in('category.uid', $categories)
+            $query->in('categories.uid', $categories)
         )->execute();
     }
 }
