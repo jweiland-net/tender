@@ -12,3 +12,5 @@ if (!defined('TYPO3_MODE')) {
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['tenderUpdateMediaFilesToFal']
     = \JWeiland\Tender\Updates\TenderMediaFilesUpdateWizard::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['tenderRenameCategoryToCategories']
+    = \JWeiland\Tender\Updates\RenameCategoryToCategoriesUpdateWizard::class;
