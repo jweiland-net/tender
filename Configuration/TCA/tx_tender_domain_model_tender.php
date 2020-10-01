@@ -19,7 +19,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime'
         ],
-        'searchFields' => 'headline,url,tenderdepartment,',
+        'searchFields' => 'headline,url,description,',
         'iconfile' => 'EXT:tender/Resources/Public/Icons/tx_tender_domain_model_tender.gif'
     ],
     'interface' => [
@@ -27,12 +27,15 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, headline, url, mediafiles, description, tenderdepartment,
+            'showitem' => '--palette--;;languageHidden, --palette--;;headlineTenderdepartment,
+             description, url, mediafiles,
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access, 
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access'
         ]
     ],
     'palettes' => [
+        'languageHidden' => ['showitem' => 'sys_language_uid, l10n_parent, hidden'],
+        'headlineTenderdepartment' => ['showitem' => 'headline, tenderdepartment'],
         'access' => [
             'showitem' => 'starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
         ]
