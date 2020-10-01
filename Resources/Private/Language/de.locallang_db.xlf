@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-  <file source-language="de" datatype="plaintext" original="messages" date="2013-02-22T13:32:22Z" product-name="tender">
-    <header/>
-    <body>
+	<file source-language="de" datatype="plaintext" original="messages" date="2013-02-22T13:32:22Z" product-name="tender">
+		<header/>
+		<body>
+			<trans-unit id="plugin.title">
+				<source>Tender</source>
+				<target>Ausschreibungen</target>
+			</trans-unit>
 
-      <trans-unit id="plugin.title">
-        <source>Tender</source>
-        <target>Ausschreibungen</target>
-      </trans-unit>
+			<!-- tender -->
 
-      <!-- tender -->
+			<trans-unit id="tx_tender_domain_model_tender">
+				<source>Tender</source>
+				<target>Ausschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.headline">
+				<source>Headline</source>
+				<target>Titel der Ausschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.url">
+				<source>Url</source>
+				<target>Verweis zu einer Webseite</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
+				<source>Tenderdepartment</source>
+				<target>Ausschreibende Stelle</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.mediafiles">
+				<source>Mediafiles</source>
+				<target>Dateien mit weiteren Information</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.description">
+				<source>Description</source>
+				<target>Gewerk/Stellenbeschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.categories">
+				<source>Categories</source>
+				<target>Kategorien</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.start">
+				<source>Release date</source>
+				<target>Veröffentlichungsdatum</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tender.stop">
+				<source>Deadline</source>
+				<target>Abgabefrist</target>
+			</trans-unit>
 
-      <trans-unit id="tx_tender_domain_model_tender">
-        <source>Tender</source>
-        <target>Ausschreibung</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.headline">
-        <source>Headline</source>
-        <target>Titel der Ausschreibung</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.url">
-        <source>Url</source>
-        <target>Verweis zu einer Webseite</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
-        <source>Tenderdepartment</source>
-        <target>Ausschreibende Stelle</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.mediafiles">
-        <source>Mediafiles</source>
-        <target>Dateien mit weiteren Information</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.description">
-        <source>Description</source>
-        <target>Gewerk/Stellenbeschreibung</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.start">
-        <source>Release date</source>
-        <target>Veröffentlichungsdatum</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.stop">
-        <source>Deadline</source>
-        <target>Abgabefrist</target>
-      </trans-unit>
+			<!-- tenderdepartment -->
 
-      <!-- tenderdepartment -->
-
-      <trans-unit id="tx_tender_domain_model_tenderdepartment">
-        <source>Tender Department</source>
-        <target>Ausschreibende Stelle</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tenderdepartment.name">
-        <source>Name</source>
-        <target>Bezeichnung der ausschreibenden Stelle</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tenderdepartment.description">
-        <source>Description</source>
-        <target>Adresse (falls Amt nicht aus Liste gewählt wird)</target>
-      </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tenderdepartment.department">
-        <source>department</source>
-        <target>Amt</target>
-      </trans-unit>
-
-    </body>
-  </file>
+			<trans-unit id="tx_tender_domain_model_tenderdepartment">
+				<source>Tender Department</source>
+				<target>Ausschreibende Stelle</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tenderdepartment.name">
+				<source>Name</source>
+				<target>Bezeichnung der ausschreibenden Stelle</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tenderdepartment.description">
+				<source>Description</source>
+				<target>Adresse (falls Amt nicht aus Liste gewählt wird)</target>
+			</trans-unit>
+			<trans-unit id="tx_tender_domain_model_tenderdepartment.department">
+				<source>department</source>
+				<target>Amt</target>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>
