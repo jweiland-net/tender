@@ -16,6 +16,7 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\Expression\ExpressionBuilder;
 use TYPO3\CMS\Core\Resource\File;
+use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Resource\ResourceStorage;
 use TYPO3\CMS\Core\Resource\StorageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -39,9 +40,19 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
     protected $output;
 
     /**
+     * Will be set within migrateField, as there can be multiple storages defined in TYPO3.
+     * Maybe another storage was configured for files in uploads/
+     *
      * @var ResourceStorage
      */
-    protected $storage;
+    protected $sourceStorage;
+
+    /**
+     * Storage for fileadmin
+     *
+     * @var ResourceStorage
+     */
+    protected $targetStorage;
 
     /**
      * Table to migrate records from
@@ -134,11 +145,14 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
         $result = true;
         try {
             $storages = GeneralUtility::makeInstance(StorageRepository::class)->findAll();
-            $this->storage = $storages[0];
+            $this->targetStorage = $storages[0];
+
             $records = $this->getRecordsFromTable();
             foreach ($records as $record) {
                 $this->migrateField($record);
             }
+
+            GeneralUtility::rmdir(Environment::getPublicPath() . '/' . $this->sourcePath);
         } catch (\Exception $e) {
             $this->output->write('Exception: ' . $e->getMessage());
             $result = false;
@@ -200,10 +214,14 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
         $fileadminDirectory = rtrim($GLOBALS['TYPO3_CONF_VARS']['BE']['fileadminDir'], '/') . '/';
         $i = 0;
 
-        $storageUid = (int)$this->storage->getUid();
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
 
         foreach ($fieldItems as $item) {
+            if ($this->sourceStorage === null) {
+                $itemIdentifier = $this->sourcePath . $item;
+                $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
+                $this->sourceStorage = $resourceFactory->getStorageObject(0, [], $itemIdentifier);
+            }
             $fileUid = null;
             $sourcePath = Environment::getPublicPath() . '/' . $this->sourcePath . $item;
             $targetDirectory = Environment::getPublicPath() . '/' . $fileadminDirectory . $this->targetPath;
@@ -227,7 +245,7 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
                     ),
                     $queryBuilder->expr()->eq(
                         'storage',
-                        $queryBuilder->createNamedParameter($storageUid, \PDO::PARAM_INT)
+                        $queryBuilder->createNamedParameter($this->targetStorage->getUid(), \PDO::PARAM_INT)
                     )
                 )->execute()->fetch();
 
@@ -243,10 +261,10 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
             if ($fileUid === null) {
                 // get the File object if it hasn't been fetched before
                 try {
-                    // if the source file does not exist, we should just continue, but leave a message in the docs;
+                    // if the target file does not exist, we should just continue, but leave a message in the docs;
                     // ideally, the user would be informed after the update as well.
                     /** @var File $file */
-                    $file = $this->storage->getFile($this->targetPath . $item);
+                    $file = $this->targetStorage->getFile($this->targetPath . $item);
                     $fileUid = $file->getUid();
                 } catch (\InvalidArgumentException $e) {
                     $format = 'File \'%s\' does not exist. Referencing field: %s.%d.%s. The reference was not migrated.';
