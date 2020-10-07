@@ -14,20 +14,14 @@ use Symfony\Component\Console\Output\OutputInterface;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Install\Updates\ChattyInterface;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 /**
  * UpgradeWizard to update categories of old column "category" to "categories"
  */
-class RenameCategoryToCategoriesUpdateWizard implements UpgradeWizardInterface, ChattyInterface
+class RenameCategoryToCategoriesUpdateWizard implements UpgradeWizardInterface
 {
-    /**
-     * @var OutputInterface
-     */
-    protected $output;
-
     /**
      * @return string Unique identifier of this updater
      */
@@ -50,14 +44,6 @@ class RenameCategoryToCategoriesUpdateWizard implements UpgradeWizardInterface, 
     public function getDescription(): string
     {
         return 'Migrate all tender categories from old column category to categories';
-    }
-
-    /**
-     * @param OutputInterface $output
-     */
-    public function setOutput(OutputInterface $output): void
-    {
-        $this->output = $output;
     }
 
     /**

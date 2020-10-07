@@ -140,7 +140,7 @@ class TenderMediaFilesUpdateWizard implements UpgradeWizardInterface, ChattyInte
                 $this->migrateField($record);
             }
         } catch (\Exception $e) {
-            // If something goes wrong, migrateField() logs an error
+            $this->output->write('Exception: ' . $e->getMessage());
             $result = false;
         }
         return $result;
