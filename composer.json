@@ -18,8 +18,8 @@
 		"source": "https://github.com/jweiland-net/tender"
 	},
 	"require": {
-		"typo3/cms-core": "^9.5.17 || ^10.4.2",
-		"jweiland/service-bw2": "dev-master"
+		"typo3/cms-core": "^9.5.29 || ^10.4.35",
+		"jweiland/service-bw2": "^4.0"
 	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^2.0",
