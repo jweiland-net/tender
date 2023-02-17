@@ -1,33 +1,28 @@
-.. every .rst file should include Includes.txt
-.. use correct path!
+..  include:: /Includes.rst.txt
 
-.. include:: Includes.txt
-
-.. Every manual should have a start label for cross-referencing to
-.. start page. Do not remove this!
 
 .. _start:
 
-=============================================================
+======
 Tender
-=============================================================
+======
 
 :Version:
-   |release|
+    |release|
 
 :Language:
-   en
+    en
 
 :Authors:
-  Markus Kugler
+    Stefan Froemken
 
 :Email:
-   projects@jweiland.net
+    projects@jweiland.net
 
 :License:
-   This extension documentation is published under the
-   `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__ (Creative Commons)
-   license
+    This extension documentation is published under the
+    `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__ (Creative Commons)
+    license
 
 Manage your tenders
 
@@ -54,11 +49,11 @@ This documentation is for the TYPO3 extension <extkey>.
 You are welcome to help improve this guide.
 Just click on "Edit me on GitHub" on the top right to submit your change request.
 
-.. toctree::
-   :maxdepth: 3
+..  toctree::
+    :maxdepth: 3
 
-   Introduction/Index
-   Configuration/Index
-   KnownProblems/Index
-   Changelog/Index
-   Sitemap
+    Introduction/Index
+    Configuration/Index
+    KnownProblems/Index
+    Changelog/Index
+    Sitemap
