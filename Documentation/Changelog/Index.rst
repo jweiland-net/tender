@@ -1,12 +1,21 @@
-.. include:: ../Includes.txt
+..  include:: /Includes.rst.txt
 
-.. _changelog:
+..  _changelog:
 
 ==========
 Change log
 ==========
 
-Version 2.0.0
--------------
+Version 2.0.1
+=============
 
-* Now compatible with TYPO3 9.5 and 10.4
+*   Add LICENSE file
+*   Update github actions
+*   Update .editorconfig
+*   Add .gitattributes file
+*   Update .gitignore file
+
+Version 2.0.0
+=============
+
+*   Now compatible with TYPO3 9.5 and 10.4
