@@ -6,6 +6,11 @@
 Change log
 ==========
 
+Version 2.0.2
+=============
+
+*   Rename Readme.md to README.md
+
 Version 2.0.1
 =============
 
