@@ -4,7 +4,7 @@
 	"description": "Tender management",
 	"license": "GPL-2.0-or-later",
 	"keywords": ["typo3", "TYPO3 CMS", "tender"],
-	"homepage": "https://www.jweiland.net",
+	"homepage": "https://jweiland.net",
 	"authors": [
 		{
 			"name": "Stefan Froemken",
@@ -24,6 +24,9 @@
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^2.0",
 		"nimut/testing-framework": "^5.0"
+	},
+	"replace": {
+		"typo3-ter/tender": "self.version"
 	},
 	"autoload": {
 		"psr-4": {
