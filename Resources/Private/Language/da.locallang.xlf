@@ -4,68 +4,68 @@
     <header/>
     <body>
       <!-- BE: tender -->
-      <trans-unit id="tx_tender_domain_model_tender">
+      <trans-unit id="tx_tender_domain_model_tender" approved="yes">
         <source>Tender</source>
-        <target state="needs-translation">Tender</target>
+        <target state="final">Tender</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.headline">
+      <trans-unit id="tx_tender_domain_model_tender.headline" approved="yes">
         <source>headline</source>
-        <target state="needs-translation">headline</target>
+        <target state="final">overskrift</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.url">
+      <trans-unit id="tx_tender_domain_model_tender.url" approved="yes">
         <source>url:</source>
-        <target state="needs-translation">url:</target>
+        <target state="final">url:</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
+      <trans-unit id="tx_tender_domain_model_tender.tenderdepartment" approved="yes">
         <source>tenderdepartment</source>
-        <target state="needs-translation">tenderdepartment</target>
+        <target state="final">tenderafdeling</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.mediafiles">
+      <trans-unit id="tx_tender_domain_model_tender.mediafiles" approved="yes">
         <source>mediafiles</source>
-        <target state="needs-translation">mediafiles</target>
+        <target state="final">mediefiler</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.description">
+      <trans-unit id="tx_tender_domain_model_tender.description" approved="yes">
         <source>description</source>
-        <target state="needs-translation">description</target>
+        <target state="final">beskrivelse</target>
       </trans-unit>
       <!-- BE: tenderdepartment -->
-      <trans-unit id="tx_tender_domain_model_tenderdepartment">
+      <trans-unit id="tx_tender_domain_model_tenderdepartment" approved="yes">
         <source>TenderDepartment</source>
-        <target state="needs-translation">TenderDepartment</target>
+        <target state="final">Tenderafdeling</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tenderdepartment.name">
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.name" approved="yes">
         <source>name</source>
-        <target state="needs-translation">name</target>
+        <target state="final">navn</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tenderdepartment.description">
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.description" approved="yes">
         <source>description</source>
-        <target state="needs-translation">description</target>
+        <target state="final">beskrivelse</target>
       </trans-unit>
       <!-- FE: list -->
-      <trans-unit id="tx_tender_domain_model_tender.back_to_list">
+      <trans-unit id="tx_tender_domain_model_tender.back_to_list" approved="yes">
         <source>back to list</source>
-        <target state="needs-translation">back to list</target>
+        <target state="final">tilbage til liste</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.show_details">
+      <trans-unit id="tx_tender_domain_model_tender.show_details" approved="yes">
         <source>show details</source>
-        <target state="needs-translation">show details</target>
+        <target state="final">vis detaljer</target>
       </trans-unit>
       <!-- FE: show -->
-      <trans-unit id="tx_tender_domain_model_tender.deadline">
+      <trans-unit id="tx_tender_domain_model_tender.deadline" approved="yes">
         <source>deadline</source>
-        <target state="needs-translation">deadline</target>
+        <target state="final">tidsfrist</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.dateformat">
+      <trans-unit id="tx_tender_domain_model_tender.dateformat" approved="yes">
         <source>m-d-Y</source>
-        <target state="needs-translation">m-d-Y</target>
+        <target state="final">m-d-Y</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.date_of_publication">
+      <trans-unit id="tx_tender_domain_model_tender.date_of_publication" approved="yes">
         <source>date of publication</source>
-        <target state="needs-translation">date of publication</target>
+        <target state="final">dato for offentliggørelse</target>
       </trans-unit>
-      <trans-unit id="tx_tender_domain_model_tender.categories">
+      <trans-unit id="tx_tender_domain_model_tender.categories" approved="yes">
         <source>categories</source>
-        <target state="needs-translation">categories</target>
+        <target state="final">kategorier</target>
       </trans-unit>
     </body>
   </file>
