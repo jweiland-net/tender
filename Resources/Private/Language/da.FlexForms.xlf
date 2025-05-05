@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" date="2013-02-18T15:03:04Z" product-name="tender" target-language="de">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-02-18T15:03:04Z" product-name="tender" target-language="da">
     <header/>
     <body>
       <trans-unit id="sheetGeneral" xml:space="preserve" approved="yes">
 				<source>General</source>
-			<target state="final">Allgemein</target></trans-unit>
+			<target state="final">Generelt</target></trans-unit>
       <trans-unit id="useCategories" xml:space="preserve" approved="yes">
 				<source>Show item of categories</source>
-			<target state="final">Produktkategorien</target></trans-unit>
+			<target state="final">Vis element af kategorier</target></trans-unit>
     </body>
   </file>
 </xliff>

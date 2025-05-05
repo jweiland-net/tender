@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-02-22T13:32:22Z" product-name="tender" target-language="sv-SE">
+    <header/>
+    <body>
+      <trans-unit id="plugin.title">
+        <source>Tender</source>
+        <target state="needs-translation">Tender</target>
+      </trans-unit>
+      <!-- tender -->
+      <trans-unit id="tx_tender_domain_model_tender">
+        <source>Tender</source>
+        <target state="needs-translation">Tender</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.headline">
+        <source>Headline</source>
+        <target state="needs-translation">Headline</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.url">
+        <source>Url</source>
+        <target state="needs-translation">Url</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
+        <source>Tenderdepartment</source>
+        <target state="needs-translation">Tenderdepartment</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.mediafiles">
+        <source>Mediafiles</source>
+        <target state="needs-translation">Mediafiles</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.description">
+        <source>Description</source>
+        <target state="needs-translation">Description</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.categories">
+        <source>Categories</source>
+        <target state="needs-translation">Categories</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.start">
+        <source>Release date</source>
+        <target state="needs-translation">Release date</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tender.stop">
+        <source>Deadline</source>
+        <target state="needs-translation">Deadline</target>
+      </trans-unit>
+      <!-- tenderdepartment -->
+      <trans-unit id="tx_tender_domain_model_tenderdepartment">
+        <source>Tender Department</source>
+        <target state="needs-translation">Tender Department</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.description">
+        <source>Description</source>
+        <target state="needs-translation">Description</target>
+      </trans-unit>
+      <trans-unit id="tx_tender_domain_model_tenderdepartment.department">
+        <source>department</source>
+        <target state="needs-translation">department</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
