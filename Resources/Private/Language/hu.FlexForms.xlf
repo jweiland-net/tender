@@ -5,10 +5,10 @@
     <body>
       <trans-unit id="sheetGeneral" xml:space="preserve">
 				<source>General</source>
-			<target state="needs-translation">General</target></trans-unit>
+			<target state="translated">Általános</target></trans-unit>
       <trans-unit id="useCategories" xml:space="preserve">
 				<source>Show item of categories</source>
-			<target state="needs-translation">Show item of categories</target></trans-unit>
+			<target state="translated">Kategóriaelemek megjelenítése</target></trans-unit>
     </body>
   </file>
 </xliff>
