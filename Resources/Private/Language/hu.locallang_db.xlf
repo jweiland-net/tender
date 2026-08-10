@@ -5,61 +5,61 @@
     <body>
       <trans-unit id="plugin.title">
         <source>Tender</source>
-        <target state="needs-translation">Tender</target>
+        <target state="translated">Ajánlat</target>
       </trans-unit>
       <!-- tender -->
       <trans-unit id="tx_tender_domain_model_tender">
         <source>Tender</source>
-        <target state="needs-translation">Tender</target>
+        <target state="translated">Ajánlat</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.headline">
         <source>Headline</source>
-        <target state="needs-translation">Headline</target>
+        <target state="translated">Címsor</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.url">
         <source>Url</source>
-        <target state="needs-translation">Url</target>
+        <target state="translated">URL</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.tenderdepartment">
         <source>Tenderdepartment</source>
-        <target state="needs-translation">Tenderdepartment</target>
+        <target state="translated">Ajánlati osztály</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.mediafiles">
         <source>Mediafiles</source>
-        <target state="needs-translation">Mediafiles</target>
+        <target state="translated">Médiafájlok</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.description">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="translated">Leírás</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.categories">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="translated">Kategóriák</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.start">
         <source>Release date</source>
-        <target state="needs-translation">Release date</target>
+        <target state="translated">Megjelenés dátuma</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tender.stop">
         <source>Deadline</source>
-        <target state="needs-translation">Deadline</target>
+        <target state="translated">Határidő</target>
       </trans-unit>
       <!-- tenderdepartment -->
       <trans-unit id="tx_tender_domain_model_tenderdepartment">
         <source>Tender Department</source>
-        <target state="needs-translation">Tender Department</target>
+        <target state="translated">Ajánlati osztály</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tenderdepartment.name">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="translated">Név</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tenderdepartment.description">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="translated">Leírás</target>
       </trans-unit>
       <trans-unit id="tx_tender_domain_model_tenderdepartment.department">
         <source>department</source>
-        <target state="needs-translation">department</target>
+        <target state="translated">osztály</target>
       </trans-unit>
     </body>
   </file>
