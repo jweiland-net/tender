@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-02-18T15:03:04Z" product-name="tender" target-language="sr">
+    <header/>
+    <body>
+      <trans-unit id="sheetGeneral" xml:space="preserve">
+				<source>General</source>
+			<target state="needs-translation">General</target></trans-unit>
+      <trans-unit id="useCategories" xml:space="preserve">
+				<source>Show item of categories</source>
+			<target state="needs-translation">Show item of categories</target></trans-unit>
+    </body>
+  </file>
+</xliff>
